@@ -1,0 +1,15 @@
+#citHeader("To cite package 'dnn' in publications use:")
+
+# Grab the version and date from the DESCRIPTION file
+if(!exists("meta") || is.null(meta)) meta <- packageDescription("dnn")
+#year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date)
+vers <- paste("R package version", meta$Version)
+
+bibentry(bibtype="Manual",
+         title = "A Package of deep nerual network tools for probability models ",
+	 author= c(person(c("Bingshu E", "Chen"))),
+	 year = "2022",
+	 note =vers,
+ 	 url="https://CRAN.R-project.org/package=dnn",
+	 key= "Deep Neural Network Probability  Models-package"
+	 )

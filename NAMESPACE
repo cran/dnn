@@ -1,0 +1,46 @@
+useDynLib(dnn, .registration=TRUE)
+
+#exportPattern("^[^\\.]")
+exportPattern("^[[:alpha:]]+")
+
+import(ggplot2)
+import(survival)
+import(Rcpp)
+
+importFrom("graphics", "abline", "hist", "lines", "plot", "title")
+importFrom("methods", "is")
+importFrom("stats", "approx", "aggregate", "binomial", "complete.cases", "cov", "dbeta",
+           "dbinom", "density", "dpois", "dnorm", "ecdf", "family", "glm", 
+           "integrate", "lm.fit", "lowess", "logLik", 
+	   "model.frame", "model.matrix", "model.response", 
+           "nlm", "nlminb", "optim", "pchisq", "predict", "pnorm", "printCoefmat", 
+           "quantile", "qnorm", "quasibinomial", 
+	   "rbinom", "reshape", "residuals", "rexp", "rgamma", "rnorm",
+           "runif", "rweibull", 
+           "sd", "uniroot", "vcov")
+
+S3method(ibs, default)
+S3method(ibs, deepAFT)
+S3method(deepAFT, default)
+S3method(deepAFT, formula)
+S3method(deepAFT, ipcw)
+S3method(deepAFT, trans)
+
+S3method(plot, deepAFT)
+S3method(plot, dNNmodel)
+S3method(predict, dSurv)
+S3method(predict, dNNmodel)
+S3method(print, deepAFT)
+S3method(print, deepGlm)
+S3method(print, deepSurv)
+S3method(print, dNNmodel)
+S3method(print, summary.deepAFT)
+S3method(print, summary.deepGlm)
+S3method(print, summary.deepSurv)
+S3method(residuals, deepGlm)
+S3method(residuals, dSurv)
+S3method(summary, deepAFT)
+S3method(summary, dNNmodel)
+S3method(summary, deepGlm)
+S3method(summary, deepSurv)
+S3method(survfit, dSurv)
